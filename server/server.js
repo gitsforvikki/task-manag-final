@@ -45,11 +45,11 @@ app.use('/api/tasks' , require('./router/taskRouter'));
 // });
 
 //to serve the frontend
-app.use(express.static(path.join(__dirname, "././client/build")));
+app.use(express.static(path.join(__dirname, "../client/build")));
 
 app.get("*", function (req, res) {
   res.sendFile(
-    path.join(__dirname, "././client/build/index.html"),
+    path.join(__dirname, "../client/build/index.html"),
     function (err) {
       res.status(500).send(err);
     }
