@@ -144,8 +144,6 @@ To get started with the Task Management App on your local machine, follow these 
 
 Make sure you have the following software installed:
 
-- [Node.js](https://nodejs.org/) (v14 or higher)
-- Package Manager: [npm](https://www.npmjs.com/) (Comes with Node.js) or [Yarn](https://yarnpkg.com/) 
 
 ### Installation
 
@@ -185,7 +183,7 @@ Make sure you have the following software installed:
 1. Start the development server:
 
     ```bash
-    npm run dev
+    npm start
 
 
 2. Open your browser and go to [http://localhost:3000](http://localhost:3000) to access the app.
@@ -199,7 +197,7 @@ Make sure you have the following software installed:
 - **Frontend:** React.js, Redux
 - **Backend:** Node.js, Express.js
 - **Database:** MongoDB
-- **UI Styling:** CSS or any UI framework of your choice
+- **UI Styling:** CSS or Bootstrap
 - **State Management:** Redux
 - **Routing:** React Router
 
@@ -214,7 +212,4 @@ Contributions are welcome! If you'd like to contribute to the project, please fo
 4. Commit and push your changes: `git commit -m "Description of your changes"` followed by `git push origin feature-name`.
 5. Create a pull request explaining your changes.
 
-## License
-
-This project is licensed under the [MIT License](LICENSE).
 
