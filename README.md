@@ -39,6 +39,44 @@ Welcome to the Task Management App! This application is built using Node.js, Rea
 
 ## Test Case
 
+  ### Test Case: Creating a New Task
+
+**Objective:** To verify that users can successfully create a new task in the React and Node.js task management app.
+
+**Preconditions:**
+- The task management app is installed and running on a local or test server.
+- The user is logged in and has access to the task creation functionality.
+- The user is on the main dashboard or task management page.
+
+**Test Steps:**
+
+1. Open the web browser and navigate to the task management app's URL.
+2. Log in with valid credentials.
+3. Once logged in, ensure that the user is directed to the main dashboard or task management page.
+4. Locate and click on the "Create New Task" button/icon.
+5. A new task creation form should appear with fields such as:
+   - Task Name (input field)
+   - Task Description (text area)
+   - Due Date (date picker)
+   - Priority Level (dropdown)
+   - Assignee (dropdown)
+6. Fill in the task name, task description, select a due date, choose a priority level, and select an assignee (if applicable).
+7. Click the "Create Task" or "Save" button to submit the task.
+8. The system should process the request and display a success message or notification.
+9. Verify that the newly created task is displayed on the main dashboard or task list with the provided information.
+10. Verify that the task's details (name, description, due date, priority, assignee) match the information entered in the creation form.
+
+**Expected Results:**
+
+- The user should be able to successfully create a new task without encountering any errors.
+- The success message or notification should confirm the task creation.
+- The task should appear in the task list with accurate details.
+- The task's details should match the information provided during task creation.
+
+**Postconditions:**
+
+The new task is now part of the user's task list and can be edited, updated, or deleted as needed.
+
 
 
 ## Getting Started
