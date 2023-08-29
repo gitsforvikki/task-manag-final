@@ -1,0 +1,24 @@
+.landing-page{
+  background: white url("") no-repeat scroll center;
+  background-size: cover;
+  height: 100vh;
+  color:  #c2a271;
+}
+.wrapper{
+  background-image: linear-gradient(150deg, rgb(129, 12, 129), rgb(0, 195, 255));
+  height: 100%;
+}
+
+.cardForm{
+  border-radius: 15px 50px;
+}
+
+
+.bg-complete {
+  background-color: #d9edf3;
+}
+
+.bg-incomplete {
+  background-color: #f1d8f7;
+}
+
