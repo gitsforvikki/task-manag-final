@@ -20,10 +20,8 @@ Welcome to the Task Management App! This application is built using Node.js, Rea
 
 - **Task Creation:** Easily create new tasks with titles, descriptions, due dates, and priority levels.
 - **Task List:** View and manage all your tasks in an organized list.
-- **Task Details:** Click on a task to view its details and mark it as complete when done.
-- **Task Editing:** Edit task details and update their statuses.
-- **Task Filtering:** Filter tasks based on priority, completion status, or due date.
-- **Task Sorting:** Sort tasks by priority, due date, or completion status for better organization.
+- **Task Delete:** View and manage and can delete your tasks in an organized list.
+- **Task Update:** Edit task details and update their statuses like complete or incomplete.
 - **Redux State Management:** Utilizes Redux for efficient state management and data flow.
 - **Responsive UI:** A user-friendly and responsive user interface for both desktop and mobile users.
 
