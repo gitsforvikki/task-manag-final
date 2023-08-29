@@ -55,6 +55,7 @@ export const userLogin = (user , navigate)=>{
       let dataUrl='/api/users/login';
       let response =  await Axios.post(dataUrl , user);
       dispatch({type : USER_LOGIN_SUCCESS , payload : response.data});
+      dispatch(alertActions.setAlert(response.data.msg , 'success'));
       // dispatch(getUser());
       navigate('/');
 
