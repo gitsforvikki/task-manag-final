@@ -41,7 +41,7 @@ app.use('/api/tasks' , require('./router/taskRouter'));
 
 //simple request
 // app.get('/',(request , response)=>{
-//   response.send(`<h2>welcome to download Admit cart...</h2>`)
+//   response.send(`<h2>welcome to Task management App...</h2>`)
 // });
 
 //to serve the frontend
