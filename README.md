@@ -1,6 +1,6 @@
-# Task Management App - README
+# Task Management App 
 
-![App Screenshot](screenshot.png)
+
 
 Welcome to the Task Management App! This application is built using Node.js, React, and Redux to help you efficiently manage your tasks and stay organized. Whether you're a professional looking to track your work tasks or an individual managing personal to-dos, this app has got you covered.
 
