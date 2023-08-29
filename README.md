@@ -7,7 +7,7 @@ Welcome to the Task Management App! This application is built using Node.js, Rea
 ## Table of Contents
 
 - [Features](#features)
-- [Project Links](#Project Links)
+- [Project Links](#Project-Links)
 - [Getting Started](#getting-started)
   - [Prerequisites](#prerequisites)
   - [Installation](#installation)
