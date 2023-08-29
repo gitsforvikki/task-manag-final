@@ -41,7 +41,7 @@ Welcome to the Task Management App! This application is built using Node.js, Rea
 
   ### Test Case: Creating a New Task
 
-**Objective:** To verify that users can successfully create a new task in the React and Node.js task management app.
+**Objective:** To verify that users can successfully create a new task in the Task management app.
 
 **Preconditions:**
 - The task management app is installed and running on a local or test server.
@@ -61,12 +61,11 @@ Welcome to the Task Management App! This application is built using Node.js, Rea
 7. Click the "Create Task" or "Save" button to submit the task.
 8. The system should process the request and display a success message or notification.
 9. Verify that the newly created task is displayed on the main dashboard or task list with the provided information.
-10. Verify that the task's details (name, description, due date, priority, assignee) match the information entered in the creation form.
+10. Verify that the task's details (name, description) match the information entered in the creation form.
 
 **Expected Results:**
 
 - The user should be able to successfully create a new task without encountering any errors.
-- The success message or notification should confirm the task creation.
 - The task should appear in the task list with accurate details.
 - The task's details should match the information provided during task creation.
 
@@ -75,9 +74,9 @@ Welcome to the Task Management App! This application is built using Node.js, Rea
 The new task is now part of the user's task list and can be edited, updated, or deleted as needed.
 
 
-## Test Case: Updating a Task
+### Test Case: Updating a Task
 
-**Objective:** To verify that users can successfully update an existing task in the React and Node.js task management app.
+**Objective:** To verify that users can successfully update an existing task in the Task management app.
 
 **Preconditions:**
 - The task management app is installed and running on a local or test server.
@@ -107,6 +106,34 @@ The new task is now part of the user's task list and can be edited, updated, or 
 **Postconditions:**
 
 The task is updated with the new details and reflects the changes made by the user.
+
+### Test Case: Deleting a Task
+
+**Objective:** To verify that users can successfully delete an existing task in the React and Node.js task management app.
+
+**Preconditions:**
+- The task management app is installed and running on a local or test server.
+- The user is logged in and has access to the task deletion functionality.
+- The user has at least one existing task in their task list.
+
+**Test Steps:**
+
+1. Open the web browser and navigate to the task management app's URL.
+2. Log in with valid credentials.
+3. Once logged in, ensure that the user is directed to the main dashboard or task management page.
+4. Locate the task you want to delete in the task list.
+5. Click on the task to view its details or select the task for deletion.
+6. Find and click the "Delete" button or icon associated with the task.
+7. Verify that the deleted task is no longer present in the task list.
+
+**Expected Results:**
+
+- The user should be able to successfully delete an existing task without encountering any errors.
+- The task should be completely removed from the task list.
+
+**Postconditions:**
+
+The task is permanently deleted from the user's task list and cannot be recovered.
 
 
 ## Getting Started
