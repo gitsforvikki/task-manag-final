@@ -1,6 +1,7 @@
 import Axios from 'axios';
 import * as userUtil from '../../util/UserUtil';
 import * as authToken from '../../util/AuthUtil';
+import * as alertActions from '../../redux/alert/alert.action';
 
 export const USER_REGISTER_REQUEST ="USER_REGISTER_REQUEST";
 export const USER_REGISTER_SUCCESS ="USER_REGISTER_SUCCESS";
@@ -28,11 +29,17 @@ export const userRegister=(user , navigate)=>{
       let dataUrl = '/api/users/register';
       let response = await Axios.post(dataUrl , user);
       dispatch({type : USER_REGISTER_SUCCESS , payload : response.data});
+      dispatch(alertActions.setAlert(response.data.msg , 'success'));
+
       navigate('/users/login');
     }
     catch(error){
       console.log(error);
       dispatch({type:USER_REGISTER_FAILURE  ,payload : { error : error}});
+      let errorList = error.response.data.errors;
+      for(let error of errorList){
+        dispatch(alertActions.setAlert(error.msg , 'danger'));
+      }
       
       
     }
@@ -54,7 +61,11 @@ export const userLogin = (user , navigate)=>{
     }
     catch(error){
       console.log(error);
-      dispatch({type : USER_LOGIN_FAILURE , payload : error});      
+      dispatch({type : USER_LOGIN_FAILURE , payload : error});  
+      let errorList = error.response.data.errors;
+      for(let error of errorList){
+        dispatch(alertActions.setAlert(error.msg , 'danger'));
+      }
     }
   }
 };
