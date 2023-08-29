@@ -10,7 +10,7 @@ import UpdateTask from './models/task/UpdateTask';
 import CreateTask from './models/task/CreateTask';
 import  PrivateRoute  from './util/PrivateRoute';
 import * as userAction from './redux/user/user.action';
-
+import Alert from './util/alert/Alert';
 
 let App = ()=>{
   
@@ -25,6 +25,7 @@ let App = ()=>{
     <React.Fragment>
       <Router>
       <Navbar/>
+      <Alert/>
       <Routes>
         <Route path='/' element={<Home/>} />
         <Route path='/users/register' element={<UserRegister/>} />
