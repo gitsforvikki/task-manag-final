@@ -7,6 +7,7 @@ Welcome to the Task Management App! This application is built using Node.js, Rea
 ## Table of Contents
 
 - [Features](#features)
+- [Project Links](#Project Links)
 - [Getting Started](#getting-started)
   - [Prerequisites](#prerequisites)
   - [Installation](#installation)
@@ -25,6 +26,8 @@ Welcome to the Task Management App! This application is built using Node.js, Rea
 - **Task Sorting:** Sort tasks by priority, due date, or completion status for better organization.
 - **Redux State Management:** Utilizes Redux for efficient state management and data flow.
 - **Responsive UI:** A user-friendly and responsive user interface for both desktop and mobile users.
+
+## Project Links
 
 ## Getting Started
 
