@@ -40,8 +40,20 @@ app.use('/api/tasks' , require('./router/taskRouter'));
 
 
 //simple request
-app.get('/',(request , response)=>{
-  response.send(`<h2>welcome to download Admit cart...</h2>`)
+// app.get('/',(request , response)=>{
+//   response.send(`<h2>welcome to download Admit cart...</h2>`)
+// });
+
+//to serve the frontend
+app.use(express.static(path.join(__dirname, "././client/build")));
+
+app.get("*", function (req, res) {
+  res.sendFile(
+    path.join(__dirname, "././client/build/index.html"),
+    function (err) {
+      res.status(500).send(err);
+    }
+  );
 });
 
 
