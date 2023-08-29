@@ -35,7 +35,7 @@ Welcome to the Task Management App! This application is built using Node.js, Rea
   
   ### Links
   
-  - [GitHub Repository](https://github.com/your-username/your-repo-name)
+  - [GitHub Repository](https://github.com/gitsforvikki/task-manag-final/tree/master)
   - [Live Demo](https://your-project-live-link.com)
 
 
