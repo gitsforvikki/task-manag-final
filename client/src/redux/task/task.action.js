@@ -1,6 +1,7 @@
 import axios from 'axios';
 import * as userUtil from '../../util/UserUtil';
 import * as authUtil from '../../util/AuthUtil';
+import * as alertActions from '../../redux/alert/alert.action';
 
 export const TASK_UPLOAD_REQUEST ="TASK_UPLOAD_REQUEST";
 export const TASK_UPLOAD_SUCCESS ="TASK_UPLOAD_SUCCESS";
@@ -45,12 +46,18 @@ export const uploadTask =(task , navigate)=>{
         let dataUrl = '/api/tasks/upload';
         let response = await axios.post(dataUrl, task);
         dispatch({type : TASK_UPLOAD_SUCCESS , payload : response.data});
+        dispatch(alertActions.setAlert(response.data.msg , 'success'));
+
         navigate('/tasks/all-tasks');
       }
     }
     catch(error){
       console.log(error);
       dispatch({type : TASK_UPLOAD_FAILURE , payload:{error : error}});
+      let errorList = error.response.data.errors;
+      for(let error of errorList){
+        dispatch(alertActions.setAlert(error.msg , 'danger'));
+      } 
     }
   }
 }
@@ -113,11 +120,16 @@ export const deleteTask =(taskId)=>{
         let dataUrl = `/api/tasks/${taskId}`
         let response = await axios.delete(dataUrl);
         dispatch({type : DELETE_TASK_SUCCESS , payload : response.data});
+        dispatch(alertActions.setAlert(response.data.msg , 'success'));
       }
     }
     catch(error){
       console.log(error);
       dispatch({type : DELETE_TASK_FAILURE , payload:{error : error}});
+      let errorList = error.response.data.errors;
+      for(let error of errorList){
+        dispatch(alertActions.setAlert(error.msg , 'danger'));
+      } 
     }
   }
 }
@@ -133,12 +145,17 @@ export const updateTask =(task ,taskId ,  navigate)=>{
         let dataUrl = `/api/tasks/update/${taskId}`;
         let response = await axios.put(dataUrl ,task );
         dispatch({type : UPDATE_TASK_SUCCESS , payload :response.data});
+        dispatch(alertActions.setAlert(response.data.msg , 'success'));
         navigate('/tasks/all-tasks');
       }
     }
     catch(error){
       console.log(error);
       dispatch({type : UPDATE_TASK_FAILURE , payload : {error : error}});
+      let errorList = error.response.data.errors;
+      for(let error of errorList){
+        dispatch(alertActions.setAlert(error.msg , 'danger'));
+      } 
     }
   }
 }
