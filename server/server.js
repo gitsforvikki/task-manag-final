@@ -11,7 +11,11 @@ const app = express();
 dotEnv.config();
 
 //config cors
-app.use(cors());
+app.use(cors(
+   {
+    origin : ['https://task-management-frontend-l2gl.onrender.com/']
+  }
+));
 
 
 //allow express to handle with json file
