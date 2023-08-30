@@ -67,7 +67,14 @@ let checkIsComplete=(taskId)=>{
                                   <h4 className="font-weight-bold">{" "}</h4>
                                   <div className="form-check">
                                   <input className="form-check-input" onChange={checkIsComplete.bind(this , eachTask._id)} type="checkbox" value="" />
-                                    <label className="form-check-label" > Mark as Complete / Incomplete  </label>
+                                    
+                                  <label className="form-check-label" > 
+                                    {
+                                      (eachTask.isComplete === true)
+                                      ? <div> Mark as Incomplete </div> 
+                                      : <div> Mark is complete </div> 
+                                    }
+                                    </label>
                                   </div>
                               </div>
 
